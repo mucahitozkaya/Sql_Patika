@@ -30,3 +30,20 @@
 
 4-) Select * from film where (title like 'C%') and (length > 90) and (rental_rate = 2.99);
 
+
+ÖDEV-4
+
+1-) Select Distinct replacement_cost from film;
+
+2-) Select Count(Distinct replacement_cost) from film;
+
+3-) Select Count(*) from film where (title like 'T%') and (rating = 'G');
+
+4-) Select Count(*) from country where country like '_____';
+
+5-) Select Count(*) from city where city ilike '%R';
+
+
+
+
+
