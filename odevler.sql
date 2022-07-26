@@ -80,6 +80,17 @@ limit 4;
 4-) Select Count(Distinct(replacement_cost)) from film where length > 150;
 
 
+ÖDEV-7
+
+1-) Select rating, Count(*) from film Group by rating;
+
+2-) Select replacement_cost, Count(*) from film Group By replacement_cost Having Count(*) > 50 ;
+
+3-) Select store_id, Count(*) from customer Group By store_id;
+
+4-) Select country_id, Count(*) from city Group By country_id Order By Count(*) desc Limit 1;
+
+
 
 
 
