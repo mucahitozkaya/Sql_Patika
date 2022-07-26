@@ -69,7 +69,15 @@ order by last_name desc
 limit 4;
 
 
+ÖDEV-6
 
+1-) Select Round(AVG(rental_rate),2) from film;
+
+2-) Select Count(*) from film where title like 'C%';
+
+3-) Select MAX(length) from film where rental_rate = 0.99;
+
+4-) Select Count(Distinct(replacement_cost)) from film where length > 150;
 
 
 
