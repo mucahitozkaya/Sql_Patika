@@ -201,7 +201,19 @@ Where id < 11
 Returning *;
 
 
+ÖDEV-9
 
+1-)
+Select city.city, country.country From city
+INNER JOIN country ON country.country_id = city.country_id;
+
+2-)
+Select payment.payment_id, customer.first_name, customer.last_name from customer
+INNER JOIN payment ON customer.customer_id = payment.customer_id ;
+
+3-)
+Select rental.rental_id, customer.first_name, customer.last_name from customer
+INNER JOIN rental ON customer.customer_id = rental.customer_id ;
 
 
 
