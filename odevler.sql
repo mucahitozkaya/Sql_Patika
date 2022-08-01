@@ -216,7 +216,7 @@ Select rental.rental_id, customer.first_name, customer.last_name from customer
 INNER JOIN rental ON customer.customer_id = rental.customer_id ;
 
 
-ÖDEV 10-)
+ÖDEV 10
 
 1-)
 Select city.city, country.country From city
@@ -231,7 +231,7 @@ Select rental.rental_id, customer.first_name, customer.last_name from customer
 FULL JOIN rental ON customer.customer_id = rental.customer_id ;
 
 
-ÖDEV 11-)
+ÖDEV 11
 
 1-)
 (SELECT first_name FROM actor )
@@ -249,8 +249,35 @@ EXCEPT
 (SELECT first_name FROM customer);
 
 
+ÖDEV-12
 
+1-) 
+Select Count(*) from film where length > 
+(
+	Select AVG(length) from film
+);
 
+2-) 
+Select Count(*) from film where rental_rate = 
+(
+	Select MAX(rental_rate) from film
+);
+
+3-) 
+Select * from film where rental_rate = 
+(
+	Select MIN(rental_rate) from film
+)
+AND replacement_cost =
+(
+	Select MIN(replacement_cost) from film
+);
+
+4-)
+Select customer.customer_id, customer.first_name, customer.last_name, Count(*) as total_order from payment
+Inner Join customer On payment.customer_id = customer.customer_id
+Group By customer.customer_id
+Order By total_order desc;
 
 
 
