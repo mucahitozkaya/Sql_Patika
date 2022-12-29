@@ -26,3 +26,7 @@ from TRIANGLES;
 Select Concat(Name, '(', UCASE(LEFT(Occupation, 1)), ')') from OCCUPATIONS order by Name;
 
 Select Concat('There are a total of ', Count(Occupation), ' ', LCASE(Occupation),'s.') From OCCUPATIONS group by Occupation order by Count(Occupation);
+
+
+Select (SUBSTR(filename,1,10)) as date_name, count(*) as total_record 
+from (Select distinct filename from pc_table) as foo group by date_name
